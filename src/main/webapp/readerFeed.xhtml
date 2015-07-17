@@ -13,9 +13,7 @@
         
         
         <style>
-            
-			
-			<!--Estilo para Primefaces de los tabs, texto e imagenes de los Feeds-->
+            <!--Estilo para Primefaces de los tabs, texto e imagenes de los Feeds-->
             .table {
             margin: 0 0 0 0; 
             }
@@ -154,6 +152,32 @@ table tbody tr:nth-child(2n + 1) {
                         
                         
                         
+                        
+        <h:form id="formReader" style=" margin-left: 20px; margin-top: 20px">
+                    
+            <h:panelGrid columns="2" cellpadding="15"  styleClass="table" >
+                <p:outputLabel value="Link:" for="link" style="margin-top:5px;"/>
+                <h:panelGrid columns="3" cellpadding="15">
+                        
+                    <p:inputText style="height: 40px;" id="link" value="#{rssFeedReaderMB.link}"/>
+                    <p:commandButton style="height: 40px;" value="Reader" ajax="true" update="formReader " action="#{rssFeedReaderMB.readFeed()}" />
+                   </h:panelGrid>
+                 
+            </h:panelGrid>
+           
+            <p:tabView value="#{rssFeedReaderMB.listaFeed}" var="feed">
+                <p:tab title="#{feed.title}">
+                    
+                </p:tab>
+        
+            </p:tabView>
+          
+            
+         
+        </h:form>
+                        
+                        
+                   
                     </div>
 		</div>
             </section>
