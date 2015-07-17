@@ -21,6 +21,9 @@ public class FeedMessage {
   String author;
   String guid;
 
+  public FeedMessage() {
+  }
+
   public String getTitle() {
     return title;
   }
