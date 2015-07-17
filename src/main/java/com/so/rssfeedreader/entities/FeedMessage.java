@@ -20,9 +20,8 @@ public class FeedMessage {
   String link;
   String author;
   String guid;
-
-  public FeedMessage() {
-  }
+  String url;
+  String urlImgen;
 
   public String getTitle() {
     return title;
@@ -64,11 +63,28 @@ public class FeedMessage {
     this.guid = guid;
   }
 
-  @Override
-  public String toString() {
-    return "FeedMessage [title=" + title + ", description=" + description
-        + ", link=" + link + ", author=" + author + ", guid=" + guid
-        + "]";
-  }
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getUrlImgen() {
+        return urlImgen;
+    }
+
+    public void setUrlImgen(String urlImgen) {
+        this.urlImgen = urlImgen;
+    }
+
+    @Override
+    public String toString() {
+        return "FeedMessage{" + "title=" + title + ", description=" + description + ", link=" + link + ", author=" + author + ", guid=" + guid + ", url=" + url + '}';
+    }
+
+ 
+
 
 }

@@ -6,7 +6,10 @@
 
 package  com.so.rssfeedreader.entities;
 
-
+/**
+ * RSS Feed Model 
+ * @author GoFor2014
+ */
 public class Item {
 
     String title;
